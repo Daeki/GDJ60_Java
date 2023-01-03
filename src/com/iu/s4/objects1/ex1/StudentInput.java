@@ -26,7 +26,7 @@ public class StudentInput {
 	//setStudent
 	//학생한명 객체를 생성해서, 이름, 번호, 국어, 영어, 수학 입력
 	//총점 평균
-	public void setStudent() {
+	public Student [] setStudent(Student [] students) {
 		Scanner sc = new Scanner(System.in);
 		Student student = new Student();
 		System.out.println("이름 입력");
@@ -43,7 +43,13 @@ public class StudentInput {
 		student.total=student.kor+student.eng+student.math;
 		student.avg = student.total/3.0;
 		
+		Student [] newStudents = new Student[students.length+1];
+		for(int i=0;i<students.length;i++) {
+			newStudents[i]=students[i];
+		}
 		
+		newStudents[students.length]=student;
+		return newStudents;
 	}
 	
 	

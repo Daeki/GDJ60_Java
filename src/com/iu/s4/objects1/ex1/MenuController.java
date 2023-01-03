@@ -24,9 +24,10 @@ public class MenuController {
 		
 		while(check) {
 			System.out.println("1.학생 정보 입력");
-			System.out.println("2.수정");
+			System.out.println("2.학생 검색 정보 출력");
 			System.out.println("3.학생 전체 정보 출력");
-			System.out.println("4.종료");
+			System.out.println("4.학생 추가");
+			System.out.println("5.종료");
 			int select=sc.nextInt();
 			
 			switch(select) {
@@ -35,10 +36,19 @@ public class MenuController {
 				si.setAllStudents(students);
 				break;
 			case 2:
-				System.out.println("수정입니다");
+				 Student student = si.findStudent(students);
+				 if(student != null) {
+					 sv.viewOne(student);
+				 }else {
+					 System.out.println("그런 학생은 없어요");
+				 }
+				
 				break;
 			case 3:
 				sv.viewList(students);
+				break;
+			case 4:
+				 students = si.setStudent(students);
 				break;
 			default:
 				System.out.println("종료합니다");
