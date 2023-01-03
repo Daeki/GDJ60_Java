@@ -4,6 +4,25 @@ import java.util.Scanner;
 
 public class StudentInput {
 	
+	//findStudent 
+	//학생배열을 받아서
+	//학생의 번호를 입력받아서 일치하는 학생을 리턴 없으면 null
+	public Student findStudent(Student [] students) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("찾으려는 학생의 번호를 입력");
+		int num=sc.nextInt();
+		Student student = null;
+		for(int i=0;i<students.length;i++) {
+			if(num==students[i].num) {
+				student = students[i];
+				//return students[i];
+			}
+		}
+		
+		return student;
+	}
+	
+	
 	//setStudent
 	//학생한명 객체를 생성해서, 이름, 번호, 국어, 영어, 수학 입력
 	//총점 평균
