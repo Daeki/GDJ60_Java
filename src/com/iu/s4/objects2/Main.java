@@ -10,6 +10,8 @@ public class Main {
 		int num = returnTest.t2();
 		
 		System.out.println(num);
+		
+		int [] ar = returnTest.t3();
 
 	}
 

@@ -13,5 +13,11 @@ public class ReturnTest {
 		System.out.println("return 은 int");
 		return random.nextInt(50);
 	}
+	
+	public int [] t3() {
+		int [] ar = new int [3];
+		
+		return ar;
+	}
 
 }
