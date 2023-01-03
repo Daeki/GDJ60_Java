@@ -6,7 +6,7 @@ public class StudentView {
 	public void view(Student [] students) {
 		for(int i=0;i<students.length;i++) {
 			Student student = students[i];
-			
+			this.view(student);
 			
 		}
 		
