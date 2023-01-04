@@ -4,11 +4,11 @@ public class Knight extends Character implements AttackAble {
 	
 	int strong;
 	
-	Item item;
+	Item item= new Staff();
 	
 	@Override
 	public void attack() {
-		// TODO Auto-generated method stub
+		item.a();
 		
 	}
 
