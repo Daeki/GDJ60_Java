@@ -2,17 +2,25 @@ package com.iu.s4.objects2;
 
 public class Car {
 	
-	String company;
+	static String company="BMW";
 	String name;
 	int price;
 	String color;
 	
+	{
+		//초기화 블럭
+		System.out.println("초기화 블럭 : "+this.company);
+		this.company="AUDI";
+	}
+	
+	
 	public Car() {
-		this("Black");//생성자내에서 다른 생성자 호출
-//		this.company="Kia";
-//		this.name="스포티지";
-//		this.price=3500;
-//		this.color="Black";
+//		this("Black");//생성자내에서 다른 생성자 호출
+		System.out.println("생성자 : "+this.company);
+		this.company="Kia";
+		this.name="스포티지";
+		this.price=3500;
+		this.color="Black";
 		
 	}
 	
