@@ -12,7 +12,7 @@ public class Main {
 		System.out.println("Right : "+robot.getArmRight());
 		
 		robot = null;
-		
+		//test
 		System.out.println("프로그램 종료");
 	}
 
